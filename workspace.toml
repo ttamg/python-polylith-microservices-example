@@ -1,0 +1,9 @@
+[tool.polylith]
+namespace = "mousetrap"
+git_tag_pattern = "stable-*"
+
+[tool.polylith.structure]
+theme = "loose"
+
+[tool.polylith.test]
+enabled = true

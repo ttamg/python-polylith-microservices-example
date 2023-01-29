@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "worker_1"
+version = "0.1.0"
+description = "A worker for fetching data."
+authors = ['Matt Gosden <mdgosden@gmail.com>']
+license = ""
+
+packages = [
+    {include = "mousetrap/job_queue", from = "../../bases"},
+    {include = "mousetrap/fetch_data", from = "../../components"},
+    {include = "mousetrap/run_fetch_worker", from = "../../components"},
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pika = "^1.3.1"
+faker = "^16.6.1"
+
+[tool.poetry.group.dev.dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
